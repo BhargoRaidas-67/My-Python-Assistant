@@ -1,4 +1,3 @@
-
 name = input("tumhara naam kya hai bhai?").strip().lower()
 category = input("category select karo  " \
 "joke " \
@@ -7,7 +6,7 @@ category = input("category select karo  " \
 "exit(leave)")
 match category:
     case joke if category == joke:
-        print("life badi asaan hai na agar bugs kud fix ho jaate?")
+        print("life badi asaan hai na agar bugs fix ho jaate?")
     case analysis if category ==  analysis:
         print("ok")
         age = int(input("tumhara age?"))
@@ -28,3 +27,4 @@ match category:
             print("dusre  subject me bhi dhyan do")
     case exit if category == exit:
             print("bye")
+            
