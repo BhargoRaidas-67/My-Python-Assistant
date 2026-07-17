@@ -7,7 +7,7 @@ category = input("category select karo  " \
 "exit(leave)")
 match category:
     case joke if category == joke:
-        print("life badi asaan hai na?")
+        print("life badi asaan hai na agar bugs kud fix ho jaate?")
     case analysis if category ==  analysis:
         print("ok")
         age = int(input("tumhara age?"))
