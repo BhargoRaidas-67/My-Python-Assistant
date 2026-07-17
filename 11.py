@@ -1,30 +1,40 @@
-name = input("tumhara naam kya hai bhai?").strip().lower()
-category = input("category select karo  " \
-"joke " \
-"tumhara age analysis batau (adult ya student)" \
-"Favorite subject ke hisab se suggestion de (match-case use karke)" \
-"exit(leave)")
-match category:
-    case joke if category == joke:
-        print("life badi asaan hai na agar bugs fix ho jaate?")
-    case analysis if category ==  analysis:
-        print("ok")
-        age = int(input("tumhara age?"))
-        
-        if age >= 18:
-            print("tum abhi adult ho")
-        else:
-            print("tm abhi student ho kyoki tum abhi adult nahi ho")
-        print("Aur tumhara naam hai" + name)
-    case suggestion if category == suggestion:
-        subject = input("your faivorite subject?").strip().lower()
+name = input("Tumhara naam kya hai bhai? ").strip().title()
 
-        if subject == "maths":
-            print("acha scope hai")
-        elif subject == "science":
-            print("good scope, better future")
+print("\nCategories:")
+print("1. joke")
+print("2. analysis")
+print("3. suggestion")
+print("4. exit")
+
+category = input("\nCategory select karo: ").strip().lower()
+
+match category:
+    case "joke":
+        print("\n😂 Life badi aasan hoti agar bugs khud fix ho jaate!")
+
+    case "analysis":
+        age = int(input("Tumhari age kya hai? "))
+
+        if age >= 18:
+            print(f"\n{name}, tum abhi adult ho.")
         else:
-            print("dusre  subject me bhi dhyan do")
-    case exit if category == exit:
-            print("bye")
-            
+            print(f"\n{name}, tum abhi student ho kyunki tumhari age 18 se kam hai.")
+
+    case "suggestion":
+        subject = input("Tumhara favourite subject kya hai? ").strip().lower()
+
+        match subject:
+            case "maths":
+                print("📘 Mathematics mein analytical thinking aur problem-solving ka strong scope hai.")
+            case "science":
+                print("🔬 Science future technologies aur research ke liye bahut achha field hai.")
+            case "computer":
+                print("💻 Computer Science software development, AI aur cybersecurity jaise fields ke liye excellent choice hai.")
+            case _:
+                print("📚 Har subject important hota hai. Apni interest ke hisaab se seekhte raho.")
+
+    case "exit":
+        print("👋 Program band ho gaya. Dhanyavaad!")
+
+    case _:
+        print("❌ Invalid category. Kripya valid option select karein.")
